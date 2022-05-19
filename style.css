@@ -1,44 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     font-family: roboto;
     margin: 0;
     justify-content: space-between;
-    height: 100vh;
+    width: 100%;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
+a {
+    text-decoration: none;
 }
 
-li, .secondary {
-    font-size: 18px;
-    color: #cbcdd0;
-}
+/* Below is the CSS for the first section of the landing page */
 
+/* Header part of the first section */
 .hero, .left {
     display: flex;
     flex-direction: column;
 }
 
 .hero {
-    padding: 30px 12.5% 100px;
-    gap: 100px;
+    padding: 10px 10.5% 20px;
+    gap: 90px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(37, 40, 61,1),rgb(37, 40, 61,0.8));
 }
 
-.left {
-    gap: 15px;
-    width: 45%;
+.top {
+    display: flex;
+    align-items: center;
 }
 
-.hero, .footer {
-    background-color: #1f2937;
+.support {
+    font-size: 30px;
+    color: #dbe2e5;
+    font-weight: bold;
 }
 
 .header {
@@ -48,42 +51,126 @@ li, .secondary {
 }
 
 .logo {
-    font-size: 26px;
-    color: #F9FAF8;
-    font-weight: bold;
+    width: 120px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+li {
+    transition: background-color 1s, padding 0.5s;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: rgba(206, 199, 199, 0.2);
+    padding: 5px;
+}
+
+li, .head-list a, .secondary {
+    font-size: 18px;
+    color: rgba(197, 218, 223, 0.8);
+    font-weight: 400;
+}
+
+/* Main part of the first section */
+
+.left {
+    gap: 15px;
+    width: 48%;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+}
+
+.main, .scroll {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .main {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    margin-bottom: auto;
+    margin-top:auto;
 }
 
 .main-text {
     font-size: 48px;
     font-weight: 800;
-    color: #F9FAF8;
+    color: rgb(219, 226, 229);
 }
 
 button {
-    background-color: #3882f6;
+    background-color: rgb(69, 107, 188);
     color: white;
     padding: 10px 20px;
     width: 125px;
     border-radius: 10px;
     font-weight: 500;
     border: none;
+    transition: background-color 1s, width 0.5s;
 }
 
-.placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: slategray;
-    color: #e5e7eb;
-    width: 55%;
-    margin: 0;
+button:hover {
+    background-color: rgba(206, 199, 199, 0.2);
+    width: 140px;
 }
+
+figure {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(185, 207, 212, 0.8);
+    font-weight: 300;
+}
+
+.main a {
+    color:rgb(198, 216, 224);
+    border-radius: 10px;
+    transition: background-color 1s;
+}
+
+.main a:hover {
+    background-color: rgba(147, 154, 168, 0.5);
+}
+
+.main-image {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Scroll division */
+
+.scroll {
+    height: 100px;
+}
+.scroll-sign {
+    width: 60px;
+    transition: background-color 0.5s, width 1s;
+    border-radius: 50%;
+}
+.scroll-sign:hover {
+    background-color: rgba(206, 199, 199, 0.2);
+    width: 70px;
+}
+
+/* End of first section, start of Information section */
 
 .info {
     display: flex;
@@ -122,6 +209,8 @@ button {
     height: 100%;
     border-radius: 10px;
 }
+
+/* Testimonial Section */
 
 .testimonial {
     background-color: #e5e7eb;
@@ -175,4 +264,5 @@ button {
     color: white;
     padding: 30px;
     font-weight: lighter;
+    background-color: rgb(37, 40, 61);
 }
