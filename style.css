@@ -232,6 +232,8 @@ figcaption {
     color: #1f2937;
 }
 
+/* Call to action section */
+
 .call {
     margin: 80px 18%;
     padding: 40px 90px;
@@ -257,6 +259,8 @@ figcaption {
 .bottom-button {
     border: 2px solid white;
 }
+
+/* footer section */
 
 .footer {
     display: flex;
